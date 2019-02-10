@@ -1,0 +1,4 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\bin\Debug\Extension.Socket.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\bin\Debug\Extension.Socket.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Debug\Extension.Socket.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Debug\Extension.Socket.pdb

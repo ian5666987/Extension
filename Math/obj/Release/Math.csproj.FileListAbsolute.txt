@@ -1,0 +1,11 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Math\bin\Release\Extension.Math.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Math\bin\Release\Extension.Math.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Math\obj\Release\Math.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Math\obj\Release\Extension.Math.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Math\obj\Release\Extension.Math.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\bin\Release\Extension.Math.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\bin\Release\Extension.Math.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\obj\Release\Math.csproj.CoreCompileInputs.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\obj\Release\Extension.Math.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\obj\Release\Extension.Math.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\obj\Release\Math.csprojAssemblyReference.cache

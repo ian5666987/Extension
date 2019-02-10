@@ -1,0 +1,15 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Velox.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Velox.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Developer.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Reader.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Checker.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Manipulator.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.String.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Developer.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Reader.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Checker.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.Manipulator.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Debug\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\obj\Debug\Velox.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\obj\Debug\Extension.Velox.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\obj\Debug\Extension.Velox.pdb

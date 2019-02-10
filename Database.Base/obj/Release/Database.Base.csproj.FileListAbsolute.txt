@@ -1,0 +1,6 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\bin\Release\Extension.Database.Base.xml
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\bin\Release\Extension.Database.Base.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\bin\Release\Extension.Database.Base.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\obj\Release\Database.Base.csproj.CoreCompileInputs.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\obj\Release\Extension.Database.Base.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\obj\Release\Extension.Database.Base.pdb

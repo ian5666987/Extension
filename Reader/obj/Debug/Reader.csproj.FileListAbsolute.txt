@@ -1,0 +1,4 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\bin\Debug\Extension.Reader.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\bin\Debug\Extension.Reader.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Debug\Extension.Reader.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Debug\Extension.Reader.pdb

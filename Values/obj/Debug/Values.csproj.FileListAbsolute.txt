@@ -1,0 +1,4 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\bin\Debug\Extension.Values.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\bin\Debug\Extension.Values.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\obj\Debug\Extension.Values.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\obj\Debug\Extension.Values.pdb

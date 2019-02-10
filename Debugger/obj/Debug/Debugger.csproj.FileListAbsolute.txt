@@ -1,0 +1,7 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\bin\Debug\Extension.Debugger.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\bin\Debug\Extension.Debugger.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Debug\Extension.Debugger.LogBoxForm.resources
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Debug\Debugger.csproj.GenerateResource.Cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Debug\Extension.Debugger.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Debug\Extension.Debugger.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Debug\Debugger.csprojResolveAssemblyReference.cache

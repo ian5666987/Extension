@@ -1,0 +1,4 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\bin\Debug\Extension.Cryptography.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\bin\Debug\Extension.Cryptography.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\obj\Debug\Extension.Cryptography.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\obj\Debug\Extension.Cryptography.pdb

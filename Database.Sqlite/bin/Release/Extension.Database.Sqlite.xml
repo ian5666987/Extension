@@ -1,0 +1,1598 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Extension.Database.Sqlite</name>
+    </assembly>
+    <members>
+        <member name="T:Extension.Database.Sqlite.SQLiteBaseScriptModel">
+            <summary>
+            The basic model for the database basic command. Used primarily for stacking commands to be executed as a single transaction.
+            </summary>
+        </member>
+        <member name="P:Extension.Database.Sqlite.SQLiteBaseScriptModel.Script">
+            <summary>
+            The script part of the command
+            </summary>
+        </member>
+        <member name="P:Extension.Database.Sqlite.SQLiteBaseScriptModel.Pars">
+            <summary>
+            The parameters part of the command
+            </summary>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteBaseScriptModel.#ctor(System.String,System.Collections.Generic.List{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            Constructor for the basic model for the database basic command. Used primarily for stacking commands to be executed as a single transaction.
+            </summary>
+            <param name="script">The script part of the command</param>
+            <param name="pars">The parameters part of the command</param>
+        </member>
+        <member name="T:Extension.Database.Sqlite.SQLiteHandler">
+            <summary>
+            Handler for basic SQLite database operations using System.Data.SQLite. 
+            </summary>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScript(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To execute SQL script using non-query execution. Useful for non-query and non-data insertion (UPDATE and DELETE).
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed using non-query execution.</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScript(System.String,System.String)">
+            <summary>
+            To execute SQL script using non-query execution. Useful for non-query and non-data insertion (UPDATE and DELETE).
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed using non-query execution.</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScript(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To execute SQL script using non-query execution. Useful for non-query and non-data insertion (UPDATE and DELETE).
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed using non-query execution.</param>
+            <param name="pars">list of SQL parameters.</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScript(System.String,System.String,System.Collections.Generic.List{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To execute SQL script using non-query execution. Useful for non-query and non-data insertion (UPDATE and DELETE).
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed using non-query execution.</param>
+            <param name="pars">list of SQL parameters.</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteSpecialScript(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            To execute SQL script using non-query execution. Useful for non-query and non-data insertion (UPDATE and DELETE).
+            The parameters in the [script] must be specially named @par1, @par2, @par3, and so on in accordance with the list of object ([parValues]) assigned
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed using non-query execution.</param>
+            <param name="parValues">the list of objects containing values of specially named parameters in the [script]</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteSpecialScript(System.String,System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            To execute SQL script using non-query execution. Useful for non-query and non-data insertion (UPDATE and DELETE).
+            The parameters in the [script] must be specially named @par1, @par2, @par3, and so on in accordance with the list of object ([parValues]) assigned
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed using non-query execution.</param>
+            <param name="parValues">the list of objects containing values of specially named parameters in the [script]</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteSpecialScriptGetTable(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            To execute SQL script and return table from the execution. 
+            The parameters in the [script] must be specially named @par1, @par2, @par3, and so on in accordance with the list of object ([parValues]) assigned
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed that returns DataTable</param>
+            <param name="parValues">the list of objects containing values of specially named parameters in the [script]</param>
+            <returns>The DataTable result of the executed script</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteSpecialScriptGetTable(System.String,System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            To execute SQL script and return table from the execution. 
+            The parameters in the [script] must be specially named @par1, @par2, @par3, and so on in accordance with the list of object ([parValues]) assigned
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed that returns DataTable</param>
+            <param name="parValues">the list of objects containing values of specially named parameters in the [script]</param>
+            <returns>The DataTable result of the executed script</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteCommandGetTable(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteCommand)">
+            <summary>
+            To execute SQL command and return table from the execution.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="command">the command to be executed that returns DataTable</param>
+            <returns>The DataTable result of the executed script</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteCommandGetTable(System.String,System.Data.SQLite.SQLiteCommand)">
+            <summary>
+            To execute SQL command and return table from the execution.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="command">the command to be executed that returns DataTable</param>
+            <returns>The DataTable result of the executed script</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScalar(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To execute SQL script using scalar execution. Useful for data insertion (INSERT INTO).
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed using scalar execution.</param>
+            <returns>generated object (generated Id when used for data insertion).</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScalar(System.String,System.String)">
+            <summary>
+            To execute SQL script using scalar execution. Useful for data insertion (INSERT INTO).
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed using scalar execution.</param>
+            <returns>generated object (generated Id when used for data insertion).</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScalar(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To execute SQL script using scalar execution. Useful for data insertion (INSERT INTO).
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed using scalar execution.</param>
+            <param name="pars">list of SQL parameters.</param>
+            <returns>generated object (generated Id when used for data insertion).</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScalar(System.String,System.String,System.Collections.Generic.List{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To execute SQL script using scalar execution. Useful for data insertion (INSERT INTO).
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed using scalar execution.</param>
+            <param name="pars">list of SQL parameters.</param>
+            <returns>generated object (generated Id when used for data insertion).</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScriptExtractDateTimeWithAddition(System.Data.SQLite.SQLiteConnection,System.String,System.Int32)">
+            <summary>
+            To execute SQL script to extract DateTime value and to return the DateTime with additional value in seconds.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed. It is a select script, getting (ideally) only one-row-on-column DateTime value from the database</param>
+            <param name="addVal">the additional values to be added in seconds.</param>
+            <returns>DateTime value from database with additional addVal second(s). Returns null when failed to parse the database value.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScriptExtractDateTimeWithAddition(System.String,System.String,System.Int32)">
+            <summary>
+            To execute SQL script to extract DateTime value and to return the DateTime with additional value in seconds.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed. It is a select script, getting (ideally) only one-row-on-column DateTime value from the database</param>
+            <param name="addVal">the additional values to be added in seconds.</param>
+            <returns>DateTime value from database with additional addVal second(s). Returns null when failed to parse the database value.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScriptExtractDecimalWithAddition(System.Data.SQLite.SQLiteConnection,System.String,System.Decimal)">
+            <summary>
+            To execute SQL script to extract Decimal value and to return the Decimal with additional value.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed. It is a select script, getting (ideally) only one-row-on-column Decimal value from the database</param>
+            <param name="addVal">the additional values to be.</param>
+            <returns>Decimal value from database with additional addVal. Returns null when failed to parse the database value.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteScriptExtractDecimalWithAddition(System.String,System.String,System.Decimal)">
+            <summary>
+            To execute SQL script to extract Decimal value and to return the Decimal with additional value.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed. It is a select script, getting (ideally) only one-row-on-column Decimal value from the database</param>
+            <param name="addVal">the additional values to be.</param>
+            <returns>Decimal value from database with additional addVal. Returns null when failed to parse the database value.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetAggregatedValues(System.Data.SQLite.SQLiteConnection,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.String)">
+            <summary>
+            To get the "best" aggregate value from multiple tables. Supported aggregate functions: MAX, MIN.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableColumnNames">table-column pairs to get the aggregate value from, used to get aggregate values from multiple tables.</param>
+            <param name="aggFunction">the aggregate function applied: MAX or MIN.</param>
+            <returns>the "best" aggregated value.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetAggregatedValues(System.String,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.String)">
+            <summary>
+            To get the "best" aggregate value from multiple tables. Supported aggregate functions: MAX, MIN.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableColumnNames">table-column pairs to get the aggregate value from, used to get aggregate values from multiple tables.</param>
+            <param name="aggFunction">the aggregate function applied: MAX or MIN.</param>
+            <returns>the "best" aggregated value.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetAggregatedValue(System.Data.SQLite.SQLiteConnection,System.String,System.String,System.String)">
+            <summary>
+            To get an aggregate value of a single column from a single table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the column from.</param>
+            <param name="columnName">the column name to get the aggregated values from.</param>
+            <param name="aggFunction">the aggregate function applied.</param>
+            <returns>the aggregated value.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetAggregatedValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            To get an aggregate value of a single column from a single table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the column from.</param>
+            <param name="columnName">the column name to get the aggregated values from.</param>
+            <param name="aggFunction">the aggregate function applied.</param>
+            <returns>the aggregated value.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteBaseScripts(System.Data.SQLite.SQLiteConnection,System.Collections.Generic.List{Extension.Database.Sqlite.SQLiteBaseScriptModel})">
+            <summary>
+            To execute series of basic scripts (single insertion, update, or deletion) in a single transaction.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="scripts">collection of basic scripts to be executed.</param>
+            <returns>list of number of affected rows, it should all be 1 for successful transaction using basic scripts.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ExecuteBaseScripts(System.String,System.Collections.Generic.List{Extension.Database.Sqlite.SQLiteBaseScriptModel})">
+            <summary>
+            To execute series of basic scripts (single insertion, update, or deletion) in a single transaction.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="scripts">collection of basic scripts to be executed.</param>
+            <returns>list of number of affected rows, it should all be 1 for successful transaction using basic scripts.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.StartTransaction(System.Data.SQLite.SQLiteConnection)">
+            <summary>
+            To start a transaction
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.EndTransaction(System.Data.SQLite.SQLiteConnection)">
+            <summary>
+            To end a transaction
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.Rollback(System.Data.SQLite.SQLiteConnection)">
+            <summary>
+            To roleback an on-going transaction
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.CommitAndRestartTransaction(System.Data.SQLite.SQLiteConnection)">
+            <summary>
+            To commit an on-going transaction and then start a new transaction
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ClearTable(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To clear a data from a table completely.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to be cleared.</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.ClearTable(System.String,System.String)">
+            <summary>
+            To clear a data from a table completely.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to be cleared.</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.DeleteFromTableWhere(System.Data.SQLite.SQLiteConnection,System.String,System.String)">
+            <summary>
+            To delete data from a table given a where clause.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the name of the table whose data is to be deleted from.</param>
+            <param name="whereClause">where clause to qualify the deletion.</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.DeleteFromTableWhere(System.String,System.String,System.String)">
+            <summary>
+            To delete data from a table given a where clause.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the name of the table whose data is to be deleted from.</param>
+            <param name="whereClause">where clause to qualify the deletion.</param>
+            <returns>number of rows affected.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.Insert(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            To insert an item to the specified table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnAndValues">the dictionary of names and values used for the insertion.</param>
+            <returns>object returned by execute scalar of the insertion script, usually an id.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.Insert(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            To insert an item to the specified table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnAndValues">the dictionary of names and values used for the insertion.</param>
+            <returns>object returned by execute scalar of the insertion script, usually an id.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.Update(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.Object)">
+            <summary>
+            To update table item(s) qualified by single idName and single idValue.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnAndValues">the dictionary of names and values used for the update.</param>
+            <param name="idName">the single column used as the qualifier for the update.</param>
+            <param name="idValue">the value of the idName column used as the qualifier for the update.</param>
+            <returns>number of rows of affected in the table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.Update(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.Object)">
+            <summary>
+            To update table item(s) qualified by single idName and single idValue.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnAndValues">the dictionary of names and values used for the update.</param>
+            <param name="idName">the single column used as the qualifier for the update.</param>
+            <param name="idValue">the value of the idName column used as the qualifier for the update.</param>
+            <returns>number of rows of affected in the table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.UpdateWhere(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.Collections.Generic.List{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To update table item(s) which satisfy the WHERE clause condition.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnAndValues">the dictionary of names and values used for the update.</param>
+            <param name="whereClause">the WHERE clause condition for the update.</param>
+            <param name="wherePars">the parameters of the where clause.</param>
+            <returns>number of rows of affected in the table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.UpdateWhere(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.Collections.Generic.List{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To update table item(s) which satisfy the WHERE clause condition.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnAndValues">the dictionary of names and values used for the update.</param>
+            <param name="whereClause">the WHERE clause condition for the update.</param>
+            <param name="wherePars">the parameters of the where clause.</param>
+            <returns>number of rows of affected in the table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCount(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get the number of rows of the specified table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCount(System.String,System.String)">
+            <summary>
+            To get the number of rows of the specified table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCountByScript(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get the number of rows of the specified table by simple execution of a script.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="script">the script to be executed.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCountByScript(System.String,System.String)">
+            <summary>
+            To get the number of rows of the specified table by simple execution of a script.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="script">the script to be executed.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCountWhere(System.Data.SQLite.SQLiteConnection,System.String,System.String)">
+            <summary>
+            To get the number of rows of the specified table which satisfy the WHERE clause condition.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCountWhere(System.String,System.String,System.String)">
+            <summary>
+            To get the number of rows of the specified table which satisfy the WHERE clause condition.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCountFilterBy(System.Data.SQLite.SQLiteConnection,System.String,System.Object,System.Boolean,System.String)">
+            <summary>
+            To get the number of rows of the specified table filtered by default method using filterObj filter object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCountFilterBy(System.String,System.String,System.Object,System.Boolean,System.String)">
+            <summary>
+            To get the number of rows of the specified table filtered by default method using filterObj filter object.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCountFilterByParameters(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            To get the number of rows of the specified table filtered by default method using a collection of filter column name-value pairs.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetCountFilterByParameters(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            To get the number of rows of the specified table filtered by default method using a collection of filter column name-value pairs.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <returns>number of rows of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetColumns(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get the columns (list of DataColumn) of the specified table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <returns>list of DataColumns of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetColumns(System.String,System.String)">
+            <summary>
+            To get the columns (list of DataColumn) of the specified table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <returns>list of DataColumns of the retrieved table.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullDataTable(System.Data.SQLite.SQLiteConnection,System.String,System.String)">
+            <summary>
+            To get complete data (all columns retrieved) from the specified table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullDataTable(System.String,System.String,System.String)">
+            <summary>
+            To get complete data (all columns retrieved) from the specified table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullDataTableWhere(System.Data.SQLite.SQLiteConnection,System.String,System.String,System.String)">
+            <summary>
+            To get complete data (all columns retrieved) from the specified table which satisfy the WHERE clause condition.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullDataTableWhere(System.String,System.String,System.String,System.String)">
+            <summary>
+            To get complete data (all columns retrieved) from the specified table which satisfy the WHERE clause condition.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullDataTableFilterBy(System.Data.SQLite.SQLiteConnection,System.String,System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get complete data (all columns retrieved) from the specified table filtered by default method using filterObj filter object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullDataTableFilterBy(System.String,System.String,System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get complete data (all columns retrieved) from the specified table filtered by default method using filterObj filter object.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullDataTableFilterByParameters(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get complete data (all columns retrieved) from the specified table filtered by default method using a collection of filter column name-value pairs.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullDataTableFilterByParameters(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get complete data (all columns retrieved) from the specified table filtered by default method using a collection of filter column name-value pairs.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialDataTable(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            To get selected columns' data from the specified table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialDataTable(System.String,System.String,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            To get selected columns' data from the specified table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialDataTableWhere(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            To get selected columns' data from the specified table which satisfy the WHERE clause condition.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialDataTableWhere(System.String,System.String,System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            To get selected columns' data from the specified table which satisfy the WHERE clause condition.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialDataTableFilterBy(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.String},System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get selected columns' data from the specified table filtered by default method using filterObj filter object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialDataTableFilterBy(System.String,System.String,System.Collections.Generic.List{System.String},System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get selected columns' data from the specified table filtered by default method using filterObj filter object.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialDataTableFilterByParameters(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get selected columns' data from the specified table filtered by default method using a collection of filter column name-value pairs.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialDataTableFilterByParameters(System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get selected columns' data from the specified table filtered by default method using a collection of filter column name-value pairs.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullFirstDataRow(System.Data.SQLite.SQLiteConnection,System.String,System.String)">
+            <summary>
+            To get first data row of complete data (all columns retrieved) from the specified table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullFirstDataRow(System.String,System.String,System.String)">
+            <summary>
+            To get first data row of complete data (all columns retrieved) from the specified table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullFirstDataRowWhere(System.Data.SQLite.SQLiteConnection,System.String,System.String,System.String)">
+            <summary>
+            To get first data row of complete data (all columns retrieved) from the specified table which satisfy the WHERE clause condition.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullFirstDataRowWhere(System.String,System.String,System.String,System.String)">
+            <summary>
+            To get first data row of complete data (all columns retrieved) from the specified table which satisfy the WHERE clause condition.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullFirstDataRowFilterBy(System.Data.SQLite.SQLiteConnection,System.String,System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get first data row of complete data (all columns retrieved) from the specified table filtered by default method using filterObj filter object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullFirstDataRowFilterBy(System.String,System.String,System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get first data row of complete data (all columns retrieved) from the specified table filtered by default method using filterObj filter object.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullFirstDataRowFilterByParameters(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get first data row of complete data (all columns retrieved) from the specified table filtered by default method using a collection of filter column name-value pairs.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFullFirstDataRowFilterByParameters(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get first data row of complete data (all columns retrieved) from the specified table filtered by default method using a collection of filter column name-value pairs.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialFirstDataRow(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            To get first data row of selected columns' data from the specified table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialFirstDataRow(System.String,System.String,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            To get first data row of selected columns' data from the specified table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialFirstDataRowWhere(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            To get first data row of selected columns' data from the specified table which satisfy the WHERE clause condition.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialFirstDataRowWhere(System.String,System.String,System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            To get first data row of selected columns' data from the specified table which satisfy the WHERE clause condition.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialFirstDataRowFilterBy(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.String},System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get first data row of selected columns' data from the specified table filtered by default method using filterObj filter object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialFirstDataRowFilterBy(System.String,System.String,System.Collections.Generic.List{System.String},System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get first data row of selected columns' data from the specified table filtered by default method using filterObj filter object.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialFirstDataRowFilterByParameters(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get first data row of selected columns' data from the specified table filtered by default method using a collection of filter column name-value pairs.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetPartialFirstDataRowFilterByParameters(System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get first data row of selected columns' data from the specified table filtered by default method using a collection of filter column name-value pairs.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnNames">the selected columns to be queried from the data table.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the first DataRow query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetSingleColumn(System.Data.SQLite.SQLiteConnection,System.String,System.String,System.String)">
+            <summary>
+            To get selected column's data from the specified table.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnName">the selected column to be queried from the data table.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the list of object query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetSingleColumn(System.String,System.String,System.String,System.String)">
+            <summary>
+            To get selected column's data from the specified table.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnName">the selected column to be queried from the data table.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the list of object query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetSingleColumnWhere(System.Data.SQLite.SQLiteConnection,System.String,System.String,System.String,System.String)">
+            <summary>
+            To get selected column's data from the specified table which satisfy the WHERE clause condition.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnName">the selected column to be queried from the data table.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the list of object query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetSingleColumnWhere(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            To get selected column's data from the specified table which satisfy the WHERE clause condition.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnName">the selected column to be queried from the data table.</param>
+            <param name="whereClause">the WHERE clause to filter the data queried.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the list of object query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetSingleColumnFilterBy(System.Data.SQLite.SQLiteConnection,System.String,System.String,System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get selected column's data from the specified table filtered by default method using filterObj filter object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnName">the selected column to be queried from the data table.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the list of object query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetSingleColumnFilterBy(System.String,System.String,System.String,System.Object,System.Boolean,System.String,System.String)">
+            <summary>
+            To get selected column's data from the specified table filtered by default method using filterObj filter object.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnName">the selected column to be queried from the data table.</param>
+            <param name="filterObj">the filter object used to filter the data queried.</param>
+            <param name="useNull">to specify if null value in the filterObj is interpreted as equal to NULL or is skipped.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the list of object query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetSingleColumnFilterByParameters(System.Data.SQLite.SQLiteConnection,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get selected column's data from the specified table filtered by default method using a collection of filter column name-value pairs.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnName">the selected column to be queried from the data table.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the list of object query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetSingleColumnFilterByParameters(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            To get selected column's data from the specified table filtered by default method using a collection of filter column name-value pairs.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="tableName">the table name to get the data from.</param>
+            <param name="columnName">the selected column to be queried from the data table.</param>
+            <param name="filters">the collection of filter column name-value pairs used to filter the data queried.</param>
+            <param name="addWhereClause">the additional WHERE clause to filter the result further.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>the list of object query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetFirstRow(System.Data.DataTable)">
+            <summary>
+            To get the first row values of a DataTable, returned in simple dictionary format.
+            </summary>
+            <param name="table">The data DataTable to get the first row from.</param>
+            <returns>The first row data result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataTable(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To retrieve DataTable based on generic SELECT SQL query.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataTable(System.Data.SQLite.SQLiteConnection,System.String,System.Data.SQLite.SQLiteParameter)">
+            <summary>
+            To retrieve DataTable based on generic SELECT SQL query.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="par">the parameter of the query string.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataTable(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.IEnumerable{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To retrieve DataTable based on generic SELECT SQL query.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataTable(System.String,System.String)">
+            <summary>
+            To retrieve DataTable based on generic SELECT SQL query.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataTable(System.String,System.String,System.Data.SQLite.SQLiteParameter)">
+            <summary>
+            To retrieve DataTable based on generic SELECT SQL query.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="par">the parameter of the query string.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataTable(System.String,System.String,System.Collections.Generic.IEnumerable{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To retrieve DataTable based on generic SELECT SQL query.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataSet(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To retrieve DataSet based on generic SELECT SQL query.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataSet(System.Data.SQLite.SQLiteConnection,System.String,System.Data.SQLite.SQLiteParameter)">
+            <summary>
+            To retrieve DataSet based on generic SELECT SQL query.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="par">the parameter of the query string.</param>
+            <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataSet(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.IEnumerable{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To retrieve DataSet based on generic SELECT SQL query.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataSet(System.String,System.String)">
+            <summary>
+            To retrieve DataSet based on generic SELECT SQL query.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataSet(System.String,System.String,System.Data.SQLite.SQLiteParameter)">
+            <summary>
+            To retrieve DataSet based on generic SELECT SQL query.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="par">the parameter of the query string.</param>
+            <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetDataSet(System.String,System.String,System.Collections.Generic.IEnumerable{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To retrieve DataSet based on generic SELECT SQL query.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.getDataTable(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.IEnumerable{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To retrieve DataTable based on generic SELECT SQL query.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.getDataTable(System.String,System.String,System.Collections.Generic.IEnumerable{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To retrieve DataTable based on generic SELECT SQL query.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <returns>the DataTable query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.getDataSet(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.IEnumerable{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To retrieve DataSet based on generic SELECT SQL query.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.getDataSet(System.String,System.String,System.Collections.Generic.IEnumerable{System.Data.SQLite.SQLiteParameter})">
+            <summary>
+            To retrieve DataSet based on generic SELECT SQL query.
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.InsertObject``1(System.Data.SQLite.SQLiteConnection,System.String,``0,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To insert an object to the database given proper table name and object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the target table for the object to be inserted into.</param>
+            <param name="obj">the object to be inserted.</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>result of scalar execution of the INSERT INTO script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.InsertObject``1(System.String,System.String,``0,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To insert an object to the database given proper table name and object.
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="tableName">the target table for the object to be inserted into.</param>
+            <param name="obj">the object to be inserted.</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>result of scalar execution of the INSERT INTO script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.InsertObjects``1(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To insert list of objects to the database given proper table name and objects.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the target table for the objects to be inserted into.</param>
+            <param name="objs">the list of objects to be inserted.</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>results of scalar execution of the INSERT INTO script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.InsertObjects``1(System.String,System.String,System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To insert list of objects to the database given proper table name and objects.
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="tableName">the target table for the objects to be inserted into.</param>
+            <param name="objs">the list of objects to be inserted.</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>results of scalar execution of the INSERT INTO script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.UpdateObject``1(System.Data.SQLite.SQLiteConnection,System.String,``0,System.String,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To update an object in the database given proper table name and object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the target table for the object to be inserted into.</param>
+            <param name="obj">the object to be inserted.</param>
+            <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>result of scalar execution of the UPDATE script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.UpdateObject``1(System.String,System.String,``0,System.String,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To update an object in the database given proper table name and object.
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="tableName">the target table for the object to be inserted into.</param>
+            <param name="obj">the object to be inserted.</param>
+            <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>result of scalar execution of the UPDATE script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.UpdateObject``1(System.Data.SQLite.SQLiteConnection,System.String,``0,System.String,System.String,System.Boolean,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To update an object in the database given proper table name and object.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the target table for the object to be inserted into.</param>
+            <param name="obj">the object to be inserted.</param>
+            <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
+            <param name="idValue">the id value used to distinguish the updated object from the others.</param>
+            <param name="idValueIsString">to indicate if data type of the id is a string.</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>result of scalar execution of the UPDATE script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.UpdateObject``1(System.String,System.String,``0,System.String,System.String,System.Boolean,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To update an object in the database given proper table name and object.
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="tableName">the target table for the object to be inserted into.</param>
+            <param name="obj">the object to be inserted.</param>
+            <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
+            <param name="idValue">the id value used to distinguish the updated object from the others.</param>
+            <param name="idValueIsString">to indicate if data type of the id is a string.</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>result of scalar execution of the UPDATE script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.UpdateObjects``1(System.Data.SQLite.SQLiteConnection,System.String,System.Collections.Generic.List{``0},System.String,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To update list of objects to the database given proper table name and objects.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="conn">the already opened database connection.</param>
+            <param name="tableName">the target table for the objects to be inserted into.</param>
+            <param name="objs">the list of objects to be inserted.</param>
+            <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>results of scalar execution of the INSERT INTO script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.UpdateObjects``1(System.String,System.String,System.Collections.Generic.List{``0},System.String,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To update list of objects to the database given proper table name and objects.
+            </summary>
+            <typeparam name="T">generic type parameter.</typeparam>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="tableName">the target table for the objects to be inserted into.</param>
+            <param name="objs">the list of objects to be inserted.</param>
+            <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
+            <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+            <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
+            <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
+            <returns>results of scalar execution of the INSERT INTO script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.TransferTable``2(System.Data.SQLite.SQLiteConnection,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To transfer the data from one table to another by using C# classes' instances as intermediary objects.
+            The tables must be located in the same database.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <typeparam name="TSource">the generic data type to represent the source table.</typeparam>
+            <typeparam name="TDest">the generic data type to represent the destination table.</typeparam>
+            <param name="conn">the already opened database connection.</param>
+            <param name="sourceTableName">the name of the source table of the transfer.</param>
+            <param name="destTableName">the name of the destination table of the transfer.</param>
+            <param name="sourceToDestNameMapping">the source to destination class properties' name mapping (from TSource to TDest).</param>
+            <param name="sourceExcludedPropertyNames">the names of the properties of source class whose values are NOT transferred to the destination class' instance.</param>
+            <param name="sourceDateTimeFormatMap">the column-by-column map of custom DateTimeFormats to be used in extracting the DateTime columns from the source database (SQLite only).</param>
+            <param name="destExcludedPropertyNames">the names of the properties of the destination class whose values are NOT transferred to the destination database row entry (likely is the Id of the entry).</param>
+            <param name="destDateTimeFormat">the single (default) custom DateTimeFormat to be used in inserting the DateTime columns to the destination database.</param>
+            <param name="destDateTimeFormatMap">the column-by-column map of custom DateTimeFormats to be used in inserting the DateTime columns to the destination database.</param>
+            <returns>results of scalar execution of the INSERT INTO script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.TransferTable``2(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            To transfer the data from one table to another by using C# classes' instances as intermediary objects.
+            The tables must be located in the same database.
+            </summary>
+            <typeparam name="TSource">the generic data type to represent the source table.</typeparam>
+            <typeparam name="TDest">the generic data type to represent the destination table.</typeparam>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="sourceTableName">the name of the source table of the transfer.</param>
+            <param name="destTableName">the name of the destination table of the transfer.</param>
+            <param name="sourceToDestNameMapping">the source to destination class properties' name mapping (from TSource to TDest).</param>
+            <param name="sourceExcludedPropertyNames">the names of the properties of source class whose values are NOT transferred to the destination class' instance.</param>
+            <param name="sourceDateTimeFormatMap">the column-by-column map of custom DateTimeFormats to be used in extracting the DateTime columns from the source database (SQLite only).</param>
+            <param name="destExcludedPropertyNames">the names of the properties of the destination class whose values are NOT transferred to the destination database row entry (likely is the Id of the entry).</param>
+            <param name="destDateTimeFormat">the single (default) custom DateTimeFormat to be used in inserting the DateTime columns to the destination database.</param>
+            <param name="destDateTimeFormatMap">the column-by-column map of custom DateTimeFormats to be used in inserting the DateTime columns to the destination database.</param>
+            <returns>results of scalar execution of the INSERT INTO script.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesAndViews(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of tables and views from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and views.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesAndViews(System.String,System.String)">
+            <summary>
+            To get list of tables and views from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and views.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTables(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of tables from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTables(System.String,System.String)">
+            <summary>
+            To get list of tables from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetViews(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of views from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of views.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetViews(System.String,System.String)">
+            <summary>
+            To get list of views from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of views.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesViewsAndColumns(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of tables and views and their respective data columns from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and views and their respective data columns .</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesViewsAndColumns(System.String,System.String)">
+            <summary>
+            To get list of tables and views and their respective data columns from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and views and their respective data columns .</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesAndColumns(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of tables and their respective data columns from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and their respective data columns .</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesAndColumns(System.String,System.String)">
+            <summary>
+            To get list of tables and their respective data columns from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and their respective data columns .</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetViewsAndColumns(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of views and their respective data columns from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of views and their respective data columns .</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetViewsAndColumns(System.String,System.String)">
+            <summary>
+            To get list of views and their respective data columns from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of views and their respective data columns .</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesViewsAndColumnNames(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of tables and views and their respective column names from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and views and their respective column names.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesViewsAndColumnNames(System.String,System.String)">
+            <summary>
+            To get list of tables and views and their respective column names from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and views and their respective column names.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesAndColumnNames(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of tables and their respective column names from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and their respective column names.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetTablesAndColumnNames(System.String,System.String)">
+            <summary>
+            To get list of tables and their respective column names from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of tables and their respective column names.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetViewsAndColumnNames(System.Data.SQLite.SQLiteConnection,System.String)">
+            <summary>
+            To get list of views and their respective column names from a database connection.
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of views and their respective column names.</returns>
+        </member>
+        <member name="M:Extension.Database.Sqlite.SQLiteHandler.GetViewsAndColumnNames(System.String,System.String)">
+            <summary>
+            To get list of views and their respective column names from a database connection.
+            </summary>
+            <param name="connectionString">the SQL connection string to open the database connection.</param>
+            <param name="orderByClause">the ORDER BY clause to order the sequence of the data retrieved.</param>
+            <returns>The list of views and their respective column names.</returns>
+        </member>
+    </members>
+</doc>

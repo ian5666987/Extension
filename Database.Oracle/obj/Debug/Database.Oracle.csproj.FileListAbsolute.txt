@@ -1,0 +1,17 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Database.Oracle.dll.config
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Database.Oracle.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Database.Oracle.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Extractor.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.String.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Values.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Extractor.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Models.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\bin\Debug\Extension.Values.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\obj\Debug\Database.Oracle.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\obj\Debug\Extension.Database.Oracle.Properties.Resources.resources
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\obj\Debug\Database.Oracle.csproj.GenerateResource.Cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\obj\Debug\Extension.Database.Oracle.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Oracle\obj\Debug\Extension.Database.Oracle.pdb

@@ -1,0 +1,5 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\bin\Debug\Extension.Versioning.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\bin\Debug\Extension.Versioning.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Debug\Extension.Versioning.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Debug\Extension.Versioning.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Debug\Versioning.csprojResolveAssemblyReference.cache

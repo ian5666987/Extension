@@ -1,0 +1,5 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\bin\Debug\Extension.Algorithms.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\bin\Debug\Extension.Algorithms.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\obj\Debug\Algorithms.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\obj\Debug\Extension.Algorithms.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\obj\Debug\Extension.Algorithms.pdb

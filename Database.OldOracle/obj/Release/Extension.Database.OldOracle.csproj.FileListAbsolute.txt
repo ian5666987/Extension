@@ -1,0 +1,6 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Database.OldOracle\obj\Release\Extension.Database.OldOracle.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Database.OldOracle\obj\Release\Extension.Database.Oracle.OracleConnectionSettingsForm.resources
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Database.OldOracle\obj\Release\Extension.Database.Oracle.OracleFromForm.resources
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Database.OldOracle\obj\Release\Extension.Database.Oracle.OracleMultipleTableViewersForm.resources
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Database.OldOracle\obj\Release\Extension.Database.Oracle.OracleTableViewForm.resources
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Database.OldOracle\obj\Release\Extension.Database.OldOracle.csproj.GenerateResource.Cache

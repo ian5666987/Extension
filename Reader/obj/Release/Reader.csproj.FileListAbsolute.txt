@@ -1,0 +1,16 @@
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Reader\bin\Release\Extension.Reader.dll
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Reader\bin\Release\Extension.Reader.pdb
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Reader\obj\Release\Extension.Reader.dll
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Reader\obj\Release\Extension.Reader.pdb
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Reader\obj\Release\Reader.csprojResolveAssemblyReference.cache
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Reader\bin\Release\Extension.Reader.dll
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Reader\bin\Release\Extension.Reader.pdb
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Reader\obj\Release\Reader.csprojResolveAssemblyReference.cache
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Reader\obj\Release\Extension.Reader.dll
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Reader\obj\Release\Extension.Reader.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\bin\Release\Extension.Reader.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\bin\Release\Extension.Reader.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Reader.csproj.CoreCompileInputs.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Extension.Reader.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Extension.Reader.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Reader.csprojAssemblyReference.cache

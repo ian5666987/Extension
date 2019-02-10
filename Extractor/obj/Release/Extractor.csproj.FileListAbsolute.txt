@@ -1,0 +1,9 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\bin\Release\Extension.Extractor.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\bin\Release\Extension.Extractor.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\bin\Release\Extension.Values.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\bin\Release\Extension.Values.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\obj\Release\Extractor.csprojAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\obj\Release\Extractor.csproj.CoreCompileInputs.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\obj\Release\Extractor.csproj.CopyComplete
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\obj\Release\Extension.Extractor.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\obj\Release\Extension.Extractor.pdb

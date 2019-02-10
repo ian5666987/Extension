@@ -1,0 +1,5 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\bin\Debug\Extension.Drawing.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\bin\Debug\Extension.Drawing.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\obj\Debug\Extension.Drawing.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\obj\Debug\Extension.Drawing.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\obj\Debug\Drawing.csprojResolveAssemblyReference.cache

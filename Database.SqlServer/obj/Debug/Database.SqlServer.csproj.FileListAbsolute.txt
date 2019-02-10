@@ -1,0 +1,13 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.Database.SqlServer.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.Database.SqlServer.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.Extractor.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.String.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.Values.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.Extractor.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.Models.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Debug\Extension.Values.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\obj\Debug\Extension.Database.SqlServer.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\obj\Debug\Extension.Database.SqlServer.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.SqlServer\obj\Debug\Database.SqlServer.csprojResolveAssemblyReference.cache

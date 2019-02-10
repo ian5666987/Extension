@@ -1,0 +1,13 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.Developer.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.Developer.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.Checker.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.Manipulator.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.Reader.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.String.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.Checker.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.Manipulator.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.Reader.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Debug\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\obj\Debug\Developer.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\obj\Debug\Extension.Developer.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\obj\Debug\Extension.Developer.pdb

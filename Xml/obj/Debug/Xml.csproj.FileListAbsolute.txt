@@ -1,0 +1,4 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\bin\Debug\Extension.Xml.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\bin\Debug\Extension.Xml.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\obj\Debug\Extension.Xml.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\obj\Debug\Extension.Xml.pdb

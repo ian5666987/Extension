@@ -1,0 +1,15 @@
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Socket\bin\Release\Extension.Socket.dll
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Socket\bin\Release\Extension.Socket.pdb
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Socket\obj\Release\Extension.Socket.dll
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Socket\obj\Release\Extension.Socket.pdb
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Socket\obj\Release\Socket.csprojResolveAssemblyReference.cache
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Socket\bin\Release\Extension.Socket.dll
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Socket\bin\Release\Extension.Socket.pdb
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Socket\obj\Release\Socket.csprojResolveAssemblyReference.cache
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Socket\obj\Release\Extension.Socket.dll
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Socket\obj\Release\Extension.Socket.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\bin\Release\Extension.Socket.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\bin\Release\Extension.Socket.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Release\Socket.csproj.CoreCompileInputs.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Release\Extension.Socket.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Release\Extension.Socket.pdb

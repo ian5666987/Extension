@@ -1,0 +1,16 @@
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Versioning\bin\Release\Extension.Versioning.dll
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Versioning\bin\Release\Extension.Versioning.pdb
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Versioning\obj\Release\Extension.Versioning.dll
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Versioning\obj\Release\Extension.Versioning.pdb
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Versioning\obj\Release\Versioning.csprojResolveAssemblyReference.cache
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Versioning\bin\Release\Extension.Versioning.dll
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Versioning\bin\Release\Extension.Versioning.pdb
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Versioning\obj\Release\Versioning.csprojResolveAssemblyReference.cache
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Versioning\obj\Release\Extension.Versioning.dll
+C:\Astrio\CSharp2015\Desktop\DLL\Extension\Versioning\obj\Release\Extension.Versioning.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\bin\Release\Extension.Versioning.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\bin\Release\Extension.Versioning.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Release\Versioning.csproj.CoreCompileInputs.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Release\Extension.Versioning.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Release\Extension.Versioning.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Release\Versioning.csprojAssemblyReference.cache

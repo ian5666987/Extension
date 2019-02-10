@@ -1,0 +1,7 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Debug\Extension.Database.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Debug\Extension.Database.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Debug\Extension.String.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Debug\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\obj\Debug\Database.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\obj\Debug\Extension.Database.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\obj\Debug\Extension.Database.pdb

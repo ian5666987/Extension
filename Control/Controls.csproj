@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1D338C4-12A0-47DB-8E23-85591A9B9598}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Extension.Controls</RootNamespace>
+    <AssemblyName>Extension.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColorfulListBox.cs" />
+    <Compile Include="ControlledFocusCueCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DoubleListBoxPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GenericDataPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RainbowCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RainbowLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReadOnlyListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RichTextBoxExtension.cs" />
+    <Compile Include="SingleTableSpecifierPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TcpExchangeTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Checker\Checker.csproj">
+      <Project>{c2620ae8-f779-4c3e-8055-7974ae09a842}</Project>
+      <Name>Checker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Developer\Developer.csproj">
+      <Project>{4d14ea0a-8e9a-42bb-9252-99cde824129b}</Project>
+      <Name>Developer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drawing\Drawing.csproj">
+      <Project>{66090592-58b0-48aa-87c3-3eca45875030}</Project>
+      <Name>Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Manipulator\Manipulator.csproj">
+      <Project>{d14ad33f-6f17-4ed7-8708-06dbb61f03bf}</Project>
+      <Name>Manipulator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

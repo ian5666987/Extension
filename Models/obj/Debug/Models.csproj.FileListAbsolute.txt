@@ -1,0 +1,4 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\bin\Debug\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\bin\Debug\Extension.Models.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\obj\Debug\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\obj\Debug\Extension.Models.pdb

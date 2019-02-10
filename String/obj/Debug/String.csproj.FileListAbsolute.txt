@@ -1,0 +1,5 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\String\bin\Debug\Extension.String.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\String\bin\Debug\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\String\obj\Debug\Extension.String.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\String\obj\Debug\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\String\obj\Debug\String.csprojResolveAssemblyReference.cache

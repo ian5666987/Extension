@@ -1,0 +1,5 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\bin\Release\Extension.Cryptography.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\bin\Release\Extension.Cryptography.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\obj\Release\Cryptography.csproj.CoreCompileInputs.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\obj\Release\Extension.Cryptography.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Cryptography\obj\Release\Extension.Cryptography.pdb

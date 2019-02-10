@@ -1,0 +1,4 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\bin\Debug\Extension.Math.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\bin\Debug\Extension.Math.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\obj\Debug\Extension.Math.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Math\obj\Debug\Extension.Math.pdb

@@ -1,0 +1,8 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\bin\Debug\Extension.LIListener.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\bin\Debug\Extension.LIListener.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\bin\Debug\Extension.Reader.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\bin\Debug\System.Management.Automation.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\bin\Debug\Extension.Reader.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\obj\Debug\LIListener.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\obj\Debug\Extension.LIListener.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\obj\Debug\Extension.LIListener.pdb

@@ -1,0 +1,11 @@
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Checker\bin\Debug\Extension.Checker.dll
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Checker\bin\Debug\Extension.Checker.pdb
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Checker\obj\Debug\Extension.Checker.dll
+C:\Astrio\CSharp2013\Desktop\DLL\Extension\Checker\obj\Debug\Extension.Checker.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Checker\bin\Debug\Extension.Checker.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Checker\bin\Debug\Extension.Checker.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Checker\bin\Debug\Extension.String.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Checker\bin\Debug\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Checker\obj\Debug\Checker.csprojResolveAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Checker\obj\Debug\Extension.Checker.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Checker\obj\Debug\Extension.Checker.pdb

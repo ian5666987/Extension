@@ -1,0 +1,7 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\bin\Debug\Extension.Extractor.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\bin\Debug\Extension.Extractor.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\bin\Debug\Extension.Values.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\bin\Debug\Extension.Values.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\obj\Debug\Extension.Extractor.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\obj\Debug\Extension.Extractor.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Extractor\obj\Debug\Extractor.csprojResolveAssemblyReference.cache

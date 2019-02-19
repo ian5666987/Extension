@@ -17,7 +17,7 @@ namespace Extension.Versioning
       return fvi.ProductVersion;
     }
 
-    public static string GetFilerVersionFor(Assembly assembly) {
+    public static string GetFileVersionFor(Assembly assembly) {
       FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
       return fvi.FileVersion;
     }

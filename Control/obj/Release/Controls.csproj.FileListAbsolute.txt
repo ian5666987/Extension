@@ -47,3 +47,5 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Control\obj\Release\Controls.csproj.CoreC
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Control\obj\Release\Controls.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Control\obj\Release\Extension.Controls.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Control\obj\Release\Extension.Controls.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Control\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Control\bin\Release\Extension.Models.pdb

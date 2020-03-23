@@ -15,7 +15,6 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Release\System.Data.SQLite.d
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Release\System.Data.SQLite.EF6.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Release\System.Data.SQLite.Linq.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Release\Extension.Values.dll
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Release\Google.Protobuf.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Release\EntityFramework.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Release\Extension.Database.Base.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database\bin\Release\Extension.Database.Base.xml

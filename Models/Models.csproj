@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseErrorModel.cs" />
+    <Compile Include="EventHandlersAndArgs.cs" />
     <Compile Include="UntrimmedSimpleExpression.cs" />
     <Compile Include="SyntaxCheckerResult.cs" />
     <Compile Include="BaseScriptModel.cs" />

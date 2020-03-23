@@ -53,3 +53,5 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\PageManager\obj\Release\PageManager.cspro
 C:\ASTrio\VS2015\Desktop\DLL\Extension\PageManager\obj\Release\PageManager.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\PageManager\obj\Release\Extension.PageManager.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\PageManager\obj\Release\Extension.PageManager.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\PageManager\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\PageManager\bin\Release\Extension.Models.pdb

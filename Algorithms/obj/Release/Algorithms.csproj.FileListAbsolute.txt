@@ -5,7 +5,7 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Graph\obj\Release\Algorithms.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Graph\obj\Release\Algorithms.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\bin\Release\Extension.Algorithms.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\bin\Release\Extension.Algorithms.pdb
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\obj\Release\Algorithms.csprojAssemblyReference.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\obj\Release\Algorithms.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\obj\Release\Extension.Algorithms.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\obj\Release\Extension.Algorithms.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Algorithms\obj\Release\Algorithms.csprojAssemblyReference.cache

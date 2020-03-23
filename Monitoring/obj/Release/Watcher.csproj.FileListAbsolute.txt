@@ -1,0 +1,9 @@
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\bin\Release\Extension.Watcher.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\bin\Release\Extension.Watcher.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\bin\Release\Extension.Models.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\obj\Release\Watcher.csprojAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\obj\Release\Watcher.csproj.CoreCompileInputs.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\obj\Release\Watcher.csproj.CopyComplete
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\obj\Release\Extension.Watcher.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Watcher\obj\Release\Extension.Watcher.pdb

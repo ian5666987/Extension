@@ -35,3 +35,5 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\obj\Release\Developer.csproj.Co
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\obj\Release\Developer.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\obj\Release\Extension.Developer.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\obj\Release\Extension.Developer.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Developer\bin\Release\Extension.Models.pdb

@@ -8,7 +8,6 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Extension.Database.OldOracle\obj\Release\
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Extension.Database.OldOracle.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Extension.Database.OldOracle.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Extension.Controls.dll
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Oracle.ManagedDataAccess.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Extension.Developer.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Extension.Checker.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Extension.Manipulator.dll
@@ -33,3 +32,6 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\obj\Release\Database.O
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\obj\Release\Database.OldOracle.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\obj\Release\Extension.Database.OldOracle.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\obj\Release\Extension.Database.OldOracle.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Extension.Models.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.OldOracle\bin\Release\Oracle.ManagedDataAccess.dll

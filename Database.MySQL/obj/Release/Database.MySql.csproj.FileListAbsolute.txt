@@ -7,7 +7,6 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.MySQL\bin\Release\Extension.Mode
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.MySQL\bin\Release\Extension.String.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.MySQL\bin\Release\MySql.Data.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.MySQL\bin\Release\Extension.Values.dll
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.MySQL\bin\Release\Google.Protobuf.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.MySQL\bin\Release\Extension.Database.Base.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.MySQL\bin\Release\Extension.Database.Base.xml
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.MySQL\bin\Release\Extension.Extractor.pdb

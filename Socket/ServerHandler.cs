@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.IO;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Extension.Socket {
 	public class ServerHandler { //This class helping to synchronize the context with the main thread and calls it event based, rather than having the form to handle the synchronization
@@ -12,6 +13,7 @@ namespace Extension.Socket {
 		private ServerSocket serverSocket; //is not made public for good reason...
 		public int ClientNo { get { return serverSocket == null ? -1 : serverSocket.NoOfClient; } }
 		public TCPIPServerSettings Settings = new TCPIPServerSettings();
+    public List<System.Net.Sockets.Socket> ClientSockets => serverSocket?.GetAllClientSockets();
 
 		//Timer
 		private Timer timer = new Timer();
@@ -59,8 +61,9 @@ namespace Extension.Socket {
 		}
 
 		public void InitHeartBeatTimerSettings() {
-			//The Timer
-			timer.Interval = Settings.MinimumHeartBeatRate; //the timer interval is faster, to check if it is time to do the heart-beating!
+      //The Timer
+      timer.Tick -= timer_Tick;
+      timer.Interval = Settings.MinimumHeartBeatRate; //the timer interval is faster, to check if it is time to do the heart-beating!
 			timer.Enabled = HeartBeatIsEnabled;
 			timer.Tick += timer_Tick;
 			lastHeartBeatBroadcast = DateTime.Now;

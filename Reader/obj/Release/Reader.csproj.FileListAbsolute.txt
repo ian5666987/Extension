@@ -14,3 +14,7 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Reader.csproj.CoreComp
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Extension.Reader.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Extension.Reader.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Reader.csprojAssemblyReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Reader.csproj.ResolveComReference.cache
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\bin\Release\Extension.Models.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Reader\obj\Release\Reader.csproj.CopyComplete

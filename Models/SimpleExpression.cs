@@ -43,7 +43,7 @@ namespace Extension.Models {
         if (middleSignIndex > 0 && desc.Length > middleSignIndex + 1) { //comparator type is found, it also has the shift value
           LeftSide = desc.Substring(0, middleSignIndex).Trim(); //time=, taken from 0 to 3, 4 items, just like the index
           MiddleSign = middleSign;
-          RightSide = desc.Substring(middleSignIndex + 1).Trim();
+          RightSide = desc.Substring(middleSignIndex + middleSign.Length).Trim();
           IsValid = !string.IsNullOrWhiteSpace(LeftSide) && !string.IsNullOrWhiteSpace(RightSide);
           return;
         }

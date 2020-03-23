@@ -13,3 +13,4 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\bin\Release\Extension.Socket.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Release\Socket.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Release\Extension.Socket.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Release\Extension.Socket.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Socket\obj\Release\Socket.csprojAssemblyReference.cache

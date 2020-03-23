@@ -7,6 +7,45 @@ using System.Text;
 namespace Extension.String
 {
   public static class StringExtension {
+
+    private static void addCharToStringInParseAsArgs(ref List<string> result, ref List<char> chs) {
+      if (chs != null & chs.Count > 0) {//only adds to the result list if there is anything in the char list
+        string s = new string(chs.ToArray());
+        if (!string.IsNullOrWhiteSpace(s))
+          result.Add(s);
+        chs.Clear(); //for next argument
+      }
+    }
+
+    //Currently, this does not detect error
+    public static List<string> ParseAsArgs(this string str) {
+      List<string> result = new List<string>();
+      List<char> chs = new List<char>();
+      bool enclosure = false; //to detect " "
+      foreach (char c in str) {
+        if (c == '"') { //enclosure character
+          enclosure = !enclosure; //flip enclosure flag
+          if (!enclosure) //end of enclosed argument
+            addCharToStringInParseAsArgs(ref result, ref chs);          
+          continue;
+        }
+
+        if (c == ' ') { //space character
+          if (enclosure) //if it is within the enclosure, simply adds whatever character it is now
+            chs.Add(c);
+          else  //if not, it is the end of non-enclosed argument
+            addCharToStringInParseAsArgs(ref result, ref chs);
+          continue;
+        }
+
+        //Other characters, enclosed or not, simply adds
+        chs.Add(c);
+      }
+      if (!enclosure) //if the enclosure flag is not raised by the end of the parsing
+        addCharToStringInParseAsArgs(ref result, ref chs); //final addition if there is any remaining characters
+      return result;
+    }
+
     public static List<int> IndicesOf(this string str, string value, bool allowEmpty = false) {
       if (string.IsNullOrEmpty(value) && !allowEmpty)
         throw new ArgumentException("the string to find may not be empty", "value");

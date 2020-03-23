@@ -24,7 +24,7 @@ namespace Extension.Extractor {
       PropertyInfo[] destProperties = type.GetProperties();
       foreach (PropertyInfo property in sourceProperties) {
         string key = property.Name;
-        if (sourceExcludedPropertyNames.Any(x => x.Equals(key)))
+        if (sourceExcludedPropertyNames != null && sourceExcludedPropertyNames.Any(x => x.Equals(key)))
           continue; //do not process excluded property names
         object value = property.GetValue(source, null);
         string fieldName = map == null || !map.ContainsKey(key) ? key : map[key]; //if needs mapping, then maps the fieldName to the actual name

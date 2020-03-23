@@ -41,3 +41,5 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\obj\Release\Velox.csproj.CoreCompil
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\obj\Release\Velox.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\obj\Release\Extension.Velox.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\obj\Release\Extension.Velox.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Velox\bin\Release\Extension.Models.pdb

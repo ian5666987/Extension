@@ -14,9 +14,9 @@ C:\Astrio\CSharp2015\Desktop\DLL\Extension\Debugger\obj\Release\Extension.Debugg
 C:\Astrio\CSharp2015\Desktop\DLL\Extension\Debugger\obj\Release\Extension.Debugger.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\bin\Release\Extension.Debugger.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\bin\Release\Extension.Debugger.pdb
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Release\Debugger.csprojAssemblyReference.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Release\Extension.Debugger.LogBoxForm.resources
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Release\Debugger.csproj.GenerateResource.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Release\Debugger.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Release\Extension.Debugger.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Release\Extension.Debugger.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Debugger\obj\Release\Debugger.csprojAssemblyReference.cache

@@ -141,6 +141,91 @@ namespace Extension.Cryptography {
       return ms.ToArray();
     }
 
+    /// <summary>
+    /// New function to save an encrypted file, do not use obsolete <see cref="EncryptAndSaveFile(string, string)"/>
+    /// function anymore
+    /// </summary>
+    /// <param name="filepath">The file path to save the encrypted file to</param>
+    /// <param name="aes16BytesKey">The 16-bytes AES Key</param>
+    /// <param name="encoding">The encoding used for the <see cref="textData"/></param>
+    /// <param name="textData">The data text to be encrypted</param>
+    public static void EncryptAndSave(string filepath, byte[] aes16BytesKey, Encoding encoding, string textData) {
+      if (encoding == null)
+        throw new Exception("Encoding cannot be null");
+      if (string.IsNullOrWhiteSpace(textData))
+        throw new Exception("Text data cannot be empty or only consists of white space(s)");
+      EncryptAndSave(filepath, aes16BytesKey, encoding.GetBytes(textData));
+    }
+
+    /// <summary>
+    /// New function to save an encrypted file, do not use obsolete <see cref="EncryptAndSaveFile(string, string)"/>
+    /// function anymore
+    /// </summary>
+    /// <param name="filepath">The file path to save the encrypted file to</param>
+    /// <param name="aes16BytesKey">The 16-bytes AES Key</param>
+    /// <param name="data">The data to be encrypted</param>
+    public static void EncryptAndSave(string filepath, byte[] aes16BytesKey, byte[] data) {
+      if (aes16BytesKey == null || aes16BytesKey.Length != 16)
+        throw new Exception("AES key must be 16 bytes");
+      if (string.IsNullOrWhiteSpace(filepath))
+        throw new Exception("File path cannot be empty or only consists of white space(s)");
+      if (data == null || data.Length < 0)
+        throw new Exception("Data cannot be empty");
+      SetAesKey(aes16BytesKey);
+      string ext = Path.GetExtension(filepath);
+      string pass = new string(aes16BytesKey.Select(x => x.ToString("X2")).SelectMany(x => x).ToArray());
+      SetExtension(ext);
+      SetPassword(pass);
+      SetValidity();
+      byte[] output = Encrypt(data);
+      using (var fileStream = File.Create(filepath))
+        fileStream.Write(output, 0, output.Length);
+    }
+
+    /// <summary>
+    /// New function to save an encrypted file, do not use obsolete <see cref="EncryptAndSaveFile(string, string)"/>
+    /// function anymore
+    /// </summary>
+    /// <param name="filepath">The file path to save the encrypted file to</param>
+    /// <param name="aes16BytesKey">The 16-bytes AES Key</param>
+    /// <param name="password">The additional password to generate the real AES-key</param>
+    /// <param name="encoding">The encoding used for the <see cref="textData"/></param>
+    /// <param name="textData">The data text to be encrypted</param>
+    public static void EncryptAndSave(string filepath, byte[] aes16BytesKey, string password, Encoding encoding, string textData) {
+      if (encoding == null)
+        throw new Exception("Encoding cannot be null");
+      if (string.IsNullOrWhiteSpace(textData))
+        throw new Exception("Text data cannot be empty or only consists of white space(s)");
+      EncryptAndSave(filepath, aes16BytesKey, password, encoding.GetBytes(textData));
+    }
+
+    /// <summary>
+    /// New function to save an encrypted file, do not use obsolete <see cref="EncryptAndSaveFile(string, string)"/>
+    /// function anymore
+    /// </summary>
+    /// <param name="filepath">The file path to save the encrypted file to</param>
+    /// <param name="aes16BytesKey">The 16-bytes AES Key</param>
+    /// <param name="password">The additional password to generate the real AES-key</param>
+    /// <param name="data">The data to be encrypted</param>
+    public static void EncryptAndSave(string filepath, byte[] aes16BytesKey, string password, byte[] data) {
+      if (aes16BytesKey == null || aes16BytesKey.Length != 16)
+        throw new Exception("AES key must be 16 bytes");
+      if (string.IsNullOrWhiteSpace(filepath))
+        throw new Exception("File path cannot be empty or only consists of white space(s)");
+      if (string.IsNullOrEmpty(password))
+        throw new Exception("Password cannot be empty");
+      if (data == null || data.Length < 0)
+        throw new Exception("Data cannot be empty");
+      SetAesKey(aes16BytesKey);
+      string ext = Path.GetExtension(filepath);
+      SetExtension(ext);
+      SetPassword(password);
+      SetValidity();
+      byte[] output = Encrypt(data);
+      using (var fileStream = File.Create(filepath))
+        fileStream.Write(output, 0, output.Length);
+    }
+
     public static string Decrypt(string input) {
       if (!IsValid)
         return null;
@@ -159,6 +244,79 @@ namespace Extension.Cryptography {
       cs.Write(input, 0, input.Length);
       cs.Close();
       return ms.ToArray();
+    }
+
+    /// <summary>
+    /// File to load an encrypted file and decrypt its data
+    /// </summary>
+    /// <param name="filepath">The file path to load the encrypted file from</param>
+    /// <param name="aes16BytesKey">The 16-bytes AES Key</param>
+    /// <returns>The decrypted data of the file</returns>
+    public static byte[] LoadAndDecrypt(string filepath, byte[] aes16BytesKey) {
+      if (aes16BytesKey == null || aes16BytesKey.Length != 16)
+        throw new Exception("AES key must be 16 bytes");
+      if (string.IsNullOrWhiteSpace(filepath))
+        throw new Exception("File path cannot be empty or only consists of white space(s)");
+      SetAesKey(aes16BytesKey);
+      string ext = Path.GetExtension(filepath);
+      string pass = new string(aes16BytesKey.Select(x => x.ToString("X2")).SelectMany(x => x).ToArray());
+      SetExtension(ext);
+      SetPassword(pass);
+      SetValidity();
+      byte[] data = File.ReadAllBytes(filepath);
+      return Decrypt(data);
+    }
+
+    /// <summary>
+    /// File to load an encrypted file and decrypt its data, returning a string
+    /// </summary>
+    /// <param name="filepath">The file path to load the encrypted file from</param>
+    /// <param name="aes16BytesKey">The 16-bytes AES Key</param>
+    /// <param name="password">The additional password to generate the real AES-key</param>
+    /// <param name="encoding">The encoding used to return the string</param>
+    /// <returns>The decrypted data of the file in string</returns>
+    public static string LoadAndDecrypt(string filepath, byte[] aes16BytesKey, string password, Encoding encoding) {
+      if (encoding == null)
+        throw new Exception("Encoding cannot be null");
+      byte[] output = LoadAndDecrypt(filepath, aes16BytesKey, password);
+      return encoding.GetString(output);
+    }
+
+    /// <summary>
+    /// File to load an encrypted file and decrypt its data
+    /// </summary>
+    /// <param name="filepath">The file path to load the encrypted file from</param>
+    /// <param name="aes16BytesKey">The 16-bytes AES Key</param>
+    /// <param name="password">The additional password to generate the real AES-key</param>
+    /// <returns>The decrypted data of the file</returns>
+    public static byte[] LoadAndDecrypt(string filepath, byte[] aes16BytesKey, string password) {
+      if (aes16BytesKey == null || aes16BytesKey.Length != 16)
+        throw new Exception("AES key must be 16 bytes");
+      if (string.IsNullOrWhiteSpace(filepath))
+        throw new Exception("File path cannot be empty or only consists of white space(s)");
+      if (string.IsNullOrEmpty(password))
+        throw new Exception("Password cannot be empty");
+      SetAesKey(aes16BytesKey);
+      string ext = Path.GetExtension(filepath);
+      SetExtension(ext);
+      SetPassword(password);
+      SetValidity();
+      byte[] data = File.ReadAllBytes(filepath);
+      return Decrypt(data);
+    }
+
+    /// <summary>
+    /// File to load an encrypted file and decrypt its data, returning a string
+    /// </summary>
+    /// <param name="filepath">The file path to load the encrypted file from</param>
+    /// <param name="aes16BytesKey">The 16-bytes AES Key</param>
+    /// <param name="encoding">The encoding used to return the string</param>
+    /// <returns>The decrypted data of the file in string</returns>
+    public static string LoadAndDecrypt(string filepath, byte[] aes16BytesKey, Encoding encoding) {
+      if (encoding == null)
+        throw new Exception("Encoding cannot be null");
+      byte[] output = LoadAndDecrypt(filepath, aes16BytesKey);
+      return encoding.GetString(output);
     }
   }
 }

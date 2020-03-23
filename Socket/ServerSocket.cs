@@ -74,6 +74,10 @@ namespace Extension.Socket
       base.Dispose(disposing);
     }
 
+    public List<System.Net.Sockets.Socket> GetAllClientSockets() {
+      return clientNoSocketList.Select(x => x.Value).ToList();
+    }
+
 		public byte[] PingMessage = new byte[1] { 0 };
     public void PingAllClients() {      
 			foreach (System.Net.Sockets.Socket socket in clientNoSocketList.Select(x => x.Value).ToList())

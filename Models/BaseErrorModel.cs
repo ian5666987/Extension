@@ -2,6 +2,16 @@
 
 namespace Extension.Models {
   public class BaseErrorModel {
+    public BaseErrorModel() { }
+    public BaseErrorModel(int code) { Code = code; }
+    public BaseErrorModel(int code, string message) { Code = code; Message = message; }
+    public BaseErrorModel(int code, string message, string exception) { Code = code; Message = message; Exception = exception; }
+    public BaseErrorModel(int code, string message, string exception, string stacktrace) { Code = code; Message = message; Exception = exception; StackTrace = stacktrace; }
+    public BaseErrorModel(object returnObject) { ReturnObject = returnObject; }
+    public BaseErrorModel(int code, object returnObject) { Code = code; ReturnObject = returnObject; }
+    public BaseErrorModel(int code, object returnObject, string message) { Code = code; ReturnObject = returnObject; Message = message; }
+    public BaseErrorModel(int code, object returnObject, string message, string exception) { Code = code; ReturnObject = returnObject; Message = message; Exception = exception; }
+    public BaseErrorModel(int code, object returnObject, string message, string exception, string stacktrace) { Code = code; ReturnObject = returnObject; Message = message; Exception = exception; StackTrace = stacktrace; }
     public bool HasError { get {
         return Code != 0 || !string.IsNullOrWhiteSpace(Message) ||
           !string.IsNullOrWhiteSpace(StackTrace) || !string.IsNullOrWhiteSpace(Exception);
@@ -27,5 +37,7 @@ namespace Extension.Models {
       sb.AppendLine(string.Concat(stackTraceWord ?? "Stack Trace", ": ", StackTrace));
       return sb.ToString();
     }
+
+    public static BaseErrorModel CreateOk() { return new BaseErrorModel(); }
   }
 }

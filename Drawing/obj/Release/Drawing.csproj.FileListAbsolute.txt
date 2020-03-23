@@ -10,7 +10,7 @@ C:\Astrio\CSharp2015\Desktop\DLL\Extension\Drawing\obj\Release\Extension.Drawing
 C:\Astrio\CSharp2015\Desktop\DLL\Extension\Drawing\obj\Release\Extension.Drawing.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\bin\Release\Extension.Drawing.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\bin\Release\Extension.Drawing.pdb
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\obj\Release\Drawing.csprojAssemblyReference.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\obj\Release\Drawing.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\obj\Release\Extension.Drawing.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\obj\Release\Extension.Drawing.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Drawing\obj\Release\Drawing.csprojAssemblyReference.cache

@@ -83,3 +83,5 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\TcpWinForm\obj\Release\TcpWinForm.csproj.
 C:\ASTrio\VS2015\Desktop\DLL\Extension\TcpWinForm\obj\Release\TcpWinForm.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\TcpWinForm\obj\Release\Extension.TcpWinForm.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\TcpWinForm\obj\Release\Extension.TcpWinForm.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\TcpWinForm\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\TcpWinForm\bin\Release\Extension.Models.pdb

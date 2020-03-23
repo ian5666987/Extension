@@ -395,6 +395,11 @@ namespace Extension.Debugger
 			RichTextBox richTextBox = spcPanel.GetChildAtPoint(new Point(6, 6)) as RichTextBox;
       richTextBox.Clear();
 		}
-		#endregion event handlers
-	}
+    #endregion event handlers
+
+    private void LogBoxForm_FormClosing(object sender, FormClosingEventArgs e) {
+      if (PreventClosing) //if closing is to be prevented
+        e.Cancel = true; //do not allow the form to be closed using conventional manner
+    }
+  }
 }

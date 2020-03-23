@@ -24,3 +24,5 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\obj\Release\LIListener.csproj.
 C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\obj\Release\LIListener.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\obj\Release\Extension.LIListener.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\obj\Release\Extension.LIListener.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\LIListener\bin\Release\Extension.Models.pdb

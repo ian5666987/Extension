@@ -3461,10 +3461,10 @@ namespace Extension.Database.Oracle {
     /// </summary>
     /// <typeparam name="T">generic type parameter.</typeparam>
     /// <param name="conn">the already opened database connection.</param>
-    /// <param name="tableName">the target table for the object to be inserted into.</param>
-    /// <param name="obj">the object to be inserted.</param>
+    /// <param name="tableName">the target table for the object to be updated.</param>
+    /// <param name="obj">the object to be updated.</param>
     /// <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
-    /// <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+    /// <param name="excludedPropertyNames">the properties to be excluded from update of the database.</param>
     /// <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
     /// <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
     /// <param name="timeStampList">Oracle Only: to list which columns are TIMESTAMP</param>
@@ -3482,10 +3482,10 @@ namespace Extension.Database.Oracle {
     /// </summary>
     /// <typeparam name="T">generic type parameter.</typeparam>
     /// <param name="connectionString">the SQL connection string to open the database connection.</param>
-    /// <param name="tableName">the target table for the object to be inserted into.</param>
-    /// <param name="obj">the object to be inserted.</param>
+    /// <param name="tableName">the target table for the object to be updated.</param>
+    /// <param name="obj">the object to be updated.</param>
     /// <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
-    /// <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+    /// <param name="excludedPropertyNames">the properties to be excluded from update of the database.</param>
     /// <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
     /// <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
     /// <param name="timeStampList">Oracle Only: to list which columns are TIMESTAMP</param>
@@ -3506,12 +3506,12 @@ namespace Extension.Database.Oracle {
     /// </summary>
     /// <typeparam name="T">generic type parameter.</typeparam>
     /// <param name="conn">the already opened database connection.</param>
-    /// <param name="tableName">the target table for the object to be inserted into.</param>
-    /// <param name="obj">the object to be inserted.</param>
+    /// <param name="tableName">the target table for the object to be updated.</param>
+    /// <param name="obj">the object to be updated.</param>
     /// <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
     /// <param name="idValue">the id value used to distinguish the updated object from the others.</param>
     /// <param name="idValueIsString">to indicate if data type of the id is a string.</param>
-    /// <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+    /// <param name="excludedPropertyNames">the properties to be excluded from update of the database.</param>
     /// <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
     /// <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
     /// <param name="timeStampList">Oracle Only: to list which columns are TIMESTAMP</param>
@@ -3529,12 +3529,12 @@ namespace Extension.Database.Oracle {
     /// </summary>
     /// <typeparam name="T">generic type parameter.</typeparam>
     /// <param name="connectionString">the SQL connection string to open the database connection.</param>
-    /// <param name="tableName">the target table for the object to be inserted into.</param>
-    /// <param name="obj">the object to be inserted.</param>
+    /// <param name="tableName">the target table for the object to be updated.</param>
+    /// <param name="obj">the object to be updated.</param>
     /// <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
     /// <param name="idValue">the id value used to distinguish the updated object from the others.</param>
     /// <param name="idValueIsString">to indicate if data type of the id is a string.</param>
-    /// <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+    /// <param name="excludedPropertyNames">the properties to be excluded from update of the database.</param>
     /// <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
     /// <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
     /// <param name="timeStampList">Oracle Only: to list which columns are TIMESTAMP</param>
@@ -3555,14 +3555,14 @@ namespace Extension.Database.Oracle {
     /// </summary>
     /// <typeparam name="T">generic type parameter.</typeparam>
     /// <param name="conn">the already opened database connection.</param>
-    /// <param name="tableName">the target table for the objects to be inserted into.</param>
-    /// <param name="objs">the list of objects to be inserted.</param>
+    /// <param name="tableName">the target table for the objects to be updated.</param>
+    /// <param name="objs">the list of objects to be updated.</param>
     /// <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
-    /// <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+    /// <param name="excludedPropertyNames">the properties to be excluded from update of the database.</param>
     /// <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
     /// <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
     /// <param name="timeStampList">Oracle Only: to list which columns are TIMESTAMP</param>
-    /// <returns>results of scalar execution of the INSERT INTO script.</returns>
+    /// <returns>results of scalar execution of the UPDATE script.</returns>
     public static List<object> UpdateObjects<T>(OracleConnection conn, string tableName, List<T> objs, string idName,
       List<string> excludedPropertyNames = null, string dateTimeFormat = null, Dictionary<string, string> dateTimeFormatMap = null,
       List<string> timeStampList = null) {
@@ -3583,14 +3583,14 @@ namespace Extension.Database.Oracle {
     /// </summary>
     /// <typeparam name="T">generic type parameter.</typeparam>
     /// <param name="connectionString">the SQL connection string to open the database connection.</param>
-    /// <param name="tableName">the target table for the objects to be inserted into.</param>
-    /// <param name="objs">the list of objects to be inserted.</param>
+    /// <param name="tableName">the target table for the objects to be updated.</param>
+    /// <param name="objs">the list of objects to be updated.</param>
     /// <param name="idName">the id name for this object, typically like "Id" or "Name".</param>
-    /// <param name="excludedPropertyNames">the properties to be excluded from insertion to the database.</param>
+    /// <param name="excludedPropertyNames">the properties to be excluded from update of the database.</param>
     /// <param name="dateTimeFormat">the date time format used for DateTime data type.</param>
     /// <param name="dateTimeFormatMap">the date time format used for DateTime data type per column.</param>
     /// <param name="timeStampList">Oracle Only: to list which columns are TIMESTAMP</param>
-    /// <returns>results of scalar execution of the INSERT INTO script.</returns>
+    /// <returns>results of scalar execution of the UPDATE script.</returns>
     public static List<object> UpdateObjects<T>(string connectionString, string tableName, List<T> objs, string idName,
       List<string> excludedPropertyNames = null, string dateTimeFormat = null, Dictionary<string, string> dateTimeFormatMap = null,
       List<string> timeStampList = null) {

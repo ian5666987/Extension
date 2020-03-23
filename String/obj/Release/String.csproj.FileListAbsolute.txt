@@ -3,3 +3,4 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\String\bin\Release\Extension.String.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\String\obj\Release\String.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\String\obj\Release\Extension.String.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\String\obj\Release\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\String\obj\Release\String.csprojAssemblyReference.cache

@@ -29,3 +29,5 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Manipulator\obj\Release\Manipulator.cspro
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Manipulator\obj\Release\Manipulator.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Manipulator\obj\Release\Extension.Manipulator.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Manipulator\obj\Release\Extension.Manipulator.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Manipulator\bin\Release\Extension.Models.dll
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Manipulator\bin\Release\Extension.Models.pdb

@@ -3,4 +3,3 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\bin\Release\Extension.Values.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\obj\Release\Values.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\obj\Release\Extension.Values.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\obj\Release\Extension.Values.pdb
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Values\obj\Release\Values.csprojAssemblyReference.cache

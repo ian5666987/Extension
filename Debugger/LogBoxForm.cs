@@ -5,12 +5,15 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Collections;
 using System.Reflection;
+using System.IO;
 
 namespace Extension.Debugger
 {
   public partial class LogBoxForm : Form
   {
-		public LogBoxForm(bool showLogBox = false) {
+    private DateTime startDt = DateTime.Now;
+    public static string LogFilenameFormat = "yyyyMMdd_HHmmss_fff";
+		public LogBoxForm(bool showLogBox = false, string streamRootFolder = null, string logFilenameFormat = null) {
 			InitializeComponent();
 			initComponent();
 			for (int i = 0; i < NO_OF_STOPWATCH; ++i) {
@@ -20,6 +23,9 @@ namespace Extension.Debugger
 			for (int i = 0; i < NO_OF_STOPWATCH; ++i)
 				stopWatchList[i].Start();
 			this.Visible = showLogBox;
+      this.streamRootFolder = streamRootFolder;
+      if (!(string.IsNullOrEmpty(logFilenameFormat)))
+        LogFilenameFormat = logFilenameFormat;
 		}
 
 		#region entry criteria
@@ -62,10 +68,15 @@ namespace Extension.Debugger
       public EntryCriteria Criteria;
       public RichTextBox WriteBox;
       public CheckBox CheckBoxScrollToCaret;
-      public EntrySet(EntryCriteria criteria = null, RichTextBox writeBox = null, CheckBox checkBoxScrollToCaret = null) {
+      public CheckBox StreamCheckBox;
+      public string LogFilename;
+      public EntrySet(EntryCriteria criteria = null, RichTextBox writeBox = null, CheckBox checkBoxScrollToCaret = null, 
+        CheckBox streamCheckBox = null, string logFilename = null) {
         Criteria = criteria;
         WriteBox = writeBox;
         CheckBoxScrollToCaret = checkBoxScrollToCaret;
+        StreamCheckBox = streamCheckBox;
+        LogFilename = logFilename;
       }
     }
 
@@ -132,6 +143,8 @@ namespace Extension.Debugger
 				return base.CreateParams;
 			}
 		}
+
+    private string streamRootFolder;
 
     string[] rtb_names = new string[] { "All", "Error", "Others", "External" };    
     TabControl tabControl = new TabControl(); //the main tab control log, inside there are appropriate button and combobox
@@ -205,12 +218,12 @@ namespace Extension.Debugger
 
 				Panel bottomLeftPanel = new Panel();
 				bottomLeftPanel.Dock = DockStyle.Left;
-				bottomLeftPanel.Width = 340;
+				bottomLeftPanel.Width = 300;
 				splitContainer.Panel2.Controls.Add(bottomLeftPanel);
 
 				Panel bottomRightPanel = new Panel();
 				bottomRightPanel.Dock = DockStyle.Right;
-				bottomRightPanel.Width = 170;
+				bottomRightPanel.Width = 240;
 				splitContainer.Panel2.Controls.Add(bottomRightPanel);
 
 				//Creates comboBox
@@ -218,7 +231,7 @@ namespace Extension.Debugger
         comboBoxBackground.FormattingEnabled = true;
         comboBoxBackground.Location = new Point(105, 8);
         comboBoxBackground.Name = "comboBoxBackgroundColor" + rtb_names[i];
-        comboBoxBackground.Size = new Size(121, 21);
+        comboBoxBackground.Size = new Size(81, 21);
         comboBoxBackground.TabIndex = 11;
         comboBoxBackground.Items.AddRange(colors_string);
         comboBoxBackground.Text = "White";
@@ -235,56 +248,65 @@ namespace Extension.Debugger
         CheckBox checkBoxScrollToCaret = new CheckBox();
         checkBoxScrollToCaret.AutoSize = true; //Creates scroll to Caret
         checkBoxScrollToCaret.Checked = false; //by default don't scroll!
-        checkBoxScrollToCaret.Location = new Point(242, 10);
+        checkBoxScrollToCaret.Location = new Point(202, 10);
         checkBoxScrollToCaret.Name = "checkBoxScrollToCaret";
         checkBoxScrollToCaret.Size = new Size(92, 17);
         checkBoxScrollToCaret.TabIndex = 6;
         checkBoxScrollToCaret.Text = "Scroll to Caret";
         checkBoxScrollToCaret.UseVisualStyleBackColor = true;
 
-        entrySetDict.Add(rtb_names[i], new EntrySet(rtb_criteria_list[i], richTextBox, checkBoxScrollToCaret)); //EntrySet is created for each page
+        //Creation of common controls outside of this function may create blinking
+        CheckBox streamCheckBox = new CheckBox();
+        streamCheckBox.Location = new Point(10, 7);
+        streamCheckBox.Name = "checkBoxStream";
+        streamCheckBox.Size = new Size(65, 23);
+        streamCheckBox.TabIndex = 10;
+        streamCheckBox.Text = "Stream";
+        streamCheckBox.UseVisualStyleBackColor = true;
 
-				//Creation of common controls outside of this function may create blinking
-				Button saveLogButton = new Button(); //common controls are defined outside;
-				saveLogButton.Location = new Point(10, 6);
+        entrySetDict.Add(rtb_names[i], new EntrySet(rtb_criteria_list[i], richTextBox, checkBoxScrollToCaret, streamCheckBox,
+          startDt.ToString(LogFilenameFormat))); //EntrySet is created for each page
+
+        Button saveLogButton = new Button(); //common controls are defined outside;
+				saveLogButton.Location = new Point(80, 7);
 				saveLogButton.Name = "buttonSaveLog";
 				saveLogButton.Size = new Size(75, 23);
-				saveLogButton.TabIndex = 10;
+				saveLogButton.TabIndex = 11;
 				saveLogButton.Text = "Save Log";
 				saveLogButton.UseVisualStyleBackColor = true;
 				saveLogButton.Click += new EventHandler(buttonSaveLog_Click);
 
 				Button clearLogButton = new Button();
-				clearLogButton.Location = new Point(90, 6);
+				clearLogButton.Location = new Point(160, 7);
 				clearLogButton.Name = "buttonClearLog";
 				clearLogButton.Size = new Size(75, 23);
-				clearLogButton.TabIndex = 11;
+				clearLogButton.TabIndex = 12;
 				clearLogButton.Text = "Clear Log";
 				clearLogButton.UseVisualStyleBackColor = true;
 				clearLogButton.Click += new EventHandler(buttonClearLog_Click);
-				
-				//Add the created controls to the tabPage
-				bottomLeftPanel.Controls.Add(comboBoxBackground);
+
+        //Add the created controls to the tabPage
+        bottomLeftPanel.Controls.Add(comboBoxBackground);
 
         //Add common controls - bottom left (purposely duplicated to avoid flickering issue)
 				bottomLeftPanel.Controls.Add(labelBackgroundColor);
 				bottomLeftPanel.Controls.Add(checkBoxScrollToCaret);
 
-				//Add common controls - bottom right (purposely duplicated to avoid flickering issue)
-				bottomRightPanel.Controls.Add(saveLogButton);
-				bottomRightPanel.Controls.Add(clearLogButton);
+        //Add common controls - bottom right (purposely duplicated to avoid flickering issue)
+        bottomRightPanel.Controls.Add(streamCheckBox);
+        bottomRightPanel.Controls.Add(saveLogButton);
+        bottomRightPanel.Controls.Add(clearLogButton);
 
         //Add the tab page to the tab control
         tabControl.Controls.Add(tabPage);
       }
       this.Controls.Add(tabControl); //the tabControl is added to the form      
     }
+    #endregion behavior and init
 
-		#endregion behavior and init
+    #region write log
 
-		#region write log
-
-		public static int DEFAULT_LINES_LIMIT = 2000;
+    public static int DEFAULT_LINES_LIMIT = 2000;
     public static int DEFAULT_RESET_LINES = 100;
     public int LinesLimit = DEFAULT_LINES_LIMIT;
     public int ResetLines = DEFAULT_RESET_LINES;
@@ -346,6 +368,18 @@ namespace Extension.Debugger
           EntrySet entrySet = entrySetDict[pageName];
           if (!entrySet.Criteria.IsWritable(pageName, callName, color))
             continue;
+          //If stream checkbox is checked
+          if (!string.IsNullOrEmpty(streamRootFolder) && entrySet.StreamCheckBox.Checked) { //Do the streaming, but must have the stream root folder too            
+            Directory.CreateDirectory(streamRootFolder); //create the stream folder if necessary
+            string streamFolder = streamRootFolder + "\\Logs\\" + pageName;
+            Directory.CreateDirectory(streamFolder);
+            string filepath = streamFolder + "\\" + entrySet.LogFilename + ".txt";
+            using (StreamWriter writer = File.AppendText(filepath)) {
+              writer.Write(logString);
+              writer.Close();
+            }
+          }
+
           RichTextBox richTextBox = entrySet.WriteBox;
           richTextBox.SelectionStart = richTextBox.TextLength;
           richTextBox.SelectionLength = 0;

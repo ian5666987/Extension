@@ -13,4 +13,3 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\bin\Release\Extension.Versioni
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Release\Versioning.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Release\Extension.Versioning.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Release\Extension.Versioning.pdb
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Versioning\obj\Release\Versioning.csprojAssemblyReference.cache

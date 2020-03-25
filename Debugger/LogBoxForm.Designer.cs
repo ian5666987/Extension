@@ -33,15 +33,14 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
       this.ClientSize = new System.Drawing.Size(784, 441);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-      this.MinimumSize = new System.Drawing.Size(540, 160);
+      this.MinimumSize = new System.Drawing.Size(600, 160);
       this.Name = "LogBoxForm";
-      this.Text = "Log Box Form v1.1";
+      this.Text = "Log Box Form v1.2";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogBoxForm_FormClosing);
       this.ResumeLayout(false);
 
     }
 
     #endregion
-
   }
 }

@@ -3,4 +3,3 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\bin\Release\Extension.Models.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\obj\Release\Models.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\obj\Release\Extension.Models.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\obj\Release\Extension.Models.pdb
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Models\obj\Release\Models.csprojAssemblyReference.cache

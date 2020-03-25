@@ -2764,6 +2764,85 @@ namespace Extension.Database.MySql {
 
     #region generic selection
     /// <summary>
+    /// The function to check if the first cell result of the query using value that is not null and not <see cref="DBNull"/>
+    /// <para>
+    /// This method does not open or close database connection. The connection must already be opened for the method to work.
+    /// </para>
+    /// </summary>
+    /// <param name="conn">the already opened database connection.</param>
+    /// <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+    /// <param name="result">the resulting single <see cref="object"/> from the execution.</param>
+    /// <returns>The checking result</returns>
+    public static bool TryGetSingleCell(MySqlConnection conn, string selectSqlQuery, out object result) {
+      return tryGetSingleCell(conn, selectSqlQuery, null, out result);
+    }
+
+    /// <summary>
+    /// The function to check if the first cell result of the query using value that is not null and not <see cref="DBNull"/>
+    /// <para>
+    /// This method does not open or close database connection. The connection must already be opened for the method to work.
+    /// </para>
+    /// </summary>
+    /// <param name="conn">the already opened database connection.</param>
+    /// <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+    /// <param name="par">the parameter of the query string.</param>
+    /// <param name="result">the resulting single <see cref="object"/> from the execution.</param>
+    /// <returns>The checking result</returns>
+    public static bool TryGetSingleCell(MySqlConnection conn, string selectSqlQuery, MySqlParameter par, out object result) {
+      return tryGetSingleCell(conn, selectSqlQuery, new List<MySqlParameter> { par }, out result);
+    }
+
+    /// <summary>
+    /// The function to check if the first cell result of the query using value that is not null and not <see cref="DBNull"/>
+    /// <para>
+    /// This method does not open or close database connection. The connection must already be opened for the method to work.
+    /// </para>
+    /// </summary>
+    /// <param name="conn">the already opened database connection.</param>
+    /// <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+    /// <param name="pars">the parameters of the query string.</param>
+    /// <param name="result">the resulting single <see cref="object"/> from the execution.</param>
+    /// <returns>The checking result</returns>
+    public static bool TryGetSingleCell(MySqlConnection conn, string selectSqlQuery, IEnumerable<MySqlParameter> pars, out object result) {
+      return tryGetSingleCell(conn, selectSqlQuery, pars, out result);
+    }
+
+    /// <summary>
+    /// The function to check if the first cell result of the query using value that is not null and not <see cref="DBNull"/>
+    /// </summary>
+    /// <param name="connectionString">the string used to establish connection with the database.</param>
+    /// <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+    /// <param name="result">the resulting single <see cref="object"/> from the execution.</param>
+    /// <returns>The checking result</returns>
+    public static bool TryGetSingleCell(string connectionString, string selectSqlQuery, out object result) {
+      return tryGetSingleCell(connectionString, selectSqlQuery, null, out result);
+    }
+
+    /// <summary>
+    /// The function to check if the first cell result of the query using value that is not null and not <see cref="DBNull"/>
+    /// </summary>
+    /// <param name="connectionString">the string used to establish connection with the database.</param>
+    /// <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+    /// <param name="par">the parameter of the query string.</param>
+    /// <param name="result">the resulting single <see cref="object"/> from the execution.</param>
+    /// <returns>The checking result</returns>
+    public static bool TryGetSingleCell(string connectionString, string selectSqlQuery, MySqlParameter par, out object result) {
+      return tryGetSingleCell(connectionString, selectSqlQuery, new List<MySqlParameter> { par }, out result);
+    }
+
+    /// <summary>
+    /// The function to check if the first cell result of the query using value that is not null and not <see cref="DBNull"/>
+    /// </summary>
+    /// <param name="connectionString">the string used to establish connection with the database.</param>
+    /// <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+    /// <param name="pars">the parameters of the query string.</param>
+    /// <param name="result">the resulting single <see cref="object"/> from the execution.</param>
+    /// <returns>The checking result</returns>
+    public static bool TryGetSingleCell(string connectionString, string selectSqlQuery, IEnumerable<MySqlParameter> pars, out object result) {
+      return tryGetSingleCell(connectionString, selectSqlQuery, pars, out result);
+    }
+
+    /// <summary>
     /// To retrieve DataTable based on generic SELECT SQL query.
     /// <para>
     /// This method does not open or close database connection. The connection must already be opened for the method to work.
@@ -2909,8 +2988,58 @@ namespace Extension.Database.MySql {
       return getDataSet(connectionString, selectSqlQuery, pars);
     }
 
+    /// <summary>
+    /// The function to check if a table has at least one column and one row and has the value that is not null and not <see cref="DBNull"/> in its first row and first column
+    /// </summary>
+    /// <param name="table">The table to be checked</param>
+    /// <returns>The checking result</returns>
+    public static bool TableHasValue(DataTable table) => !(table == null || table.Rows == null || table.Rows.Count <= 0 || table.Columns.Count <= 0 ||
+          table.Rows[0][0] is DBNull || table.Rows[0][0] == null);
+
     //This private static method must be put, otherwise the last parameter, either SqlPar or IEnum<SqlPar> cannot be just put as null as it cannot distinguish between the two.
     //Private static methods below are created to help on that
+    /// <summary>
+    /// The function to check if the first cell result of the query using value that is not null and not <see cref="DBNull"/>
+    /// <para>
+    /// This method does not open or close database connection. The connection must already be opened for the method to work.
+    /// </para>
+    /// </summary>
+    /// <param name="conn">the already opened database connection.</param>
+    /// <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+    /// <param name="pars">the parameters of the query string.</param>
+    /// <param name="result">the resulting single <see cref="object"/> from the execution.</param>
+    /// <returns>The checking result</returns>
+    private static bool tryGetSingleCell(MySqlConnection conn, string selectSqlQuery, IEnumerable<MySqlParameter> pars, out object result) {
+      result = null;
+      try {
+        DataTable table = GetDataTable(conn, selectSqlQuery, pars);
+        if (!TableHasValue(table))
+          return false;
+        result = table.Rows[0][0];
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    /// <summary>
+    /// The function to check if the first cell result of the query using value that is not null and not <see cref="DBNull"/>
+    /// </summary>
+    /// <param name="connectionString">the string used to establish connection with the database.</param>
+    /// <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+    /// <param name="pars">the parameters of the query string.</param>
+    /// <param name="result">the resulting single <see cref="object"/> from the execution.</param>
+    /// <returns>The checking result</returns>
+    private static bool tryGetSingleCell(string connectionString, string selectSqlQuery, IEnumerable<MySqlParameter> pars, out object result) {
+      bool tryResult;
+      using (MySqlConnection conn = new MySqlConnection(connectionString)) {
+        conn.Open();
+        tryResult = tryGetSingleCell(conn, selectSqlQuery, pars, out result);
+        conn.Close();
+      }
+      return tryResult;
+    }
+
     /// <summary>
     /// To retrieve DataTable based on generic SELECT SQL query.
     /// <para>

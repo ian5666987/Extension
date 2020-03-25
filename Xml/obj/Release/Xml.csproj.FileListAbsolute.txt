@@ -7,3 +7,4 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\bin\Release\Extension.Xml.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\obj\Release\Xml.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\obj\Release\Extension.Xml.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\obj\Release\Extension.Xml.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Xml\obj\Release\Xml.csprojAssemblyReference.cache

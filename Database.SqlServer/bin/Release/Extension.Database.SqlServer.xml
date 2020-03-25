@@ -1703,6 +1703,73 @@
             <param name="table">The data DataTable to get the first row from.</param>
             <returns>The first row data result.</returns>
         </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.TryGetSingleCell(System.Data.SqlClient.SqlConnection,System.String,System.Object@)">
+            <summary>
+            The function to check if the first cell result of the query using value that is not null and not <see cref="T:System.DBNull"/>
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="result">the resulting single <see cref="T:System.Object"/> from the execution.</param>
+            <returns>The checking result</returns>
+        </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.TryGetSingleCell(System.Data.SqlClient.SqlConnection,System.String,System.Data.SqlClient.SqlParameter,System.Object@)">
+            <summary>
+            The function to check if the first cell result of the query using value that is not null and not <see cref="T:System.DBNull"/>
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="par">the parameter of the query string.</param>
+            <param name="result">the resulting single <see cref="T:System.Object"/> from the execution.</param>
+            <returns>The checking result</returns>
+        </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.TryGetSingleCell(System.Data.SqlClient.SqlConnection,System.String,System.Collections.Generic.IEnumerable{System.Data.SqlClient.SqlParameter},System.Object@)">
+            <summary>
+            The function to check if the first cell result of the query using value that is not null and not <see cref="T:System.DBNull"/>
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <param name="result">the resulting single <see cref="T:System.Object"/> from the execution.</param>
+            <returns>The checking result</returns>
+        </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.TryGetSingleCell(System.String,System.String,System.Object@)">
+            <summary>
+            The function to check if the first cell result of the query using value that is not null and not <see cref="T:System.DBNull"/>
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="result">the resulting single <see cref="T:System.Object"/> from the execution.</param>
+            <returns>The checking result</returns>
+        </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.TryGetSingleCell(System.String,System.String,System.Data.SqlClient.SqlParameter,System.Object@)">
+            <summary>
+            The function to check if the first cell result of the query using value that is not null and not <see cref="T:System.DBNull"/>
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="par">the parameter of the query string.</param>
+            <param name="result">the resulting single <see cref="T:System.Object"/> from the execution.</param>
+            <returns>The checking result</returns>
+        </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.TryGetSingleCell(System.String,System.String,System.Collections.Generic.IEnumerable{System.Data.SqlClient.SqlParameter},System.Object@)">
+            <summary>
+            The function to check if the first cell result of the query using value that is not null and not <see cref="T:System.DBNull"/>
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <param name="result">the resulting single <see cref="T:System.Object"/> from the execution.</param>
+            <returns>The checking result</returns>
+        </member>
         <member name="M:Extension.Database.SqlServer.SQLServerHandler.GetDataTable(System.Data.SqlClient.SqlConnection,System.String)">
             <summary>
             To retrieve DataTable based on generic SELECT SQL query.
@@ -1824,6 +1891,36 @@
             <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
             <param name="pars">the parameters of the query string.</param>
             <returns>the DataSet query result.</returns>
+        </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.TableHasValue(System.Data.DataTable)">
+            <summary>
+            The function to check if a table has at least one column and one row and has the value that is not null and not <see cref="T:System.DBNull"/> in its first row and first column
+            </summary>
+            <param name="table">The table to be checked</param>
+            <returns>The checking result</returns>
+        </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.tryGetSingleCell(System.Data.SqlClient.SqlConnection,System.String,System.Collections.Generic.IEnumerable{System.Data.SqlClient.SqlParameter},System.Object@)">
+            <summary>
+            The function to check if the first cell result of the query using value that is not null and not <see cref="T:System.DBNull"/>
+            <para>
+            This method does not open or close database connection. The connection must already be opened for the method to work.
+            </para>
+            </summary>
+            <param name="conn">the already opened database connection.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <param name="result">the resulting single <see cref="T:System.Object"/> from the execution.</param>
+            <returns>The checking result</returns>
+        </member>
+        <member name="M:Extension.Database.SqlServer.SQLServerHandler.tryGetSingleCell(System.String,System.String,System.Collections.Generic.IEnumerable{System.Data.SqlClient.SqlParameter},System.Object@)">
+            <summary>
+            The function to check if the first cell result of the query using value that is not null and not <see cref="T:System.DBNull"/>
+            </summary>
+            <param name="connectionString">the string used to establish connection with the database.</param>
+            <param name="selectSqlQuery">the generic SELECT SQL query to be executed.</param>
+            <param name="pars">the parameters of the query string.</param>
+            <param name="result">the resulting single <see cref="T:System.Object"/> from the execution.</param>
+            <returns>The checking result</returns>
         </member>
         <member name="M:Extension.Database.SqlServer.SQLServerHandler.getDataTable(System.Data.SqlClient.SqlConnection,System.String,System.Collections.Generic.IEnumerable{System.Data.SqlClient.SqlParameter})">
             <summary>

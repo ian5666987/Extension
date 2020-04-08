@@ -11,10 +11,10 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\bin\Release\Extension.Monitori
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\bin\Release\Extension.Monitoring.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\bin\Release\Extension.Models.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\bin\Release\Extension.Models.pdb
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\obj\Release\Monitoring.csprojAssemblyReference.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\obj\Release\Monitoring.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\obj\Release\Monitoring.csproj.CopyComplete
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\obj\Release\Extension.Monitoring.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\obj\Release\Extension.Monitoring.pdb
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\bin\Release\Extension.String.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\bin\Release\Extension.String.pdb
+C:\ASTrio\VS2015\Desktop\DLL\Extension\Monitoring\obj\Release\Monitoring.csprojAssemblyReference.cache

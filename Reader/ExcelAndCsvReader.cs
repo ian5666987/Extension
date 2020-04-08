@@ -29,6 +29,10 @@ namespace Extension.Reader {
     #endregion
 
     public static List<string> SupportedExtensions { get; set; } = new List<string> { ".xls", ".xlsx", ".csv" };
+    /// <summary>
+    /// A flag to set if we use Visual Studio Tools for Office or not, in which the Dispose mechanism will be different
+    /// </summary>
+    public bool UseVSTO { get; set; }
 
     #region Constructor
     /// <summary>
@@ -52,6 +56,7 @@ namespace Extension.Reader {
         IsCsv = ext.ToLower() == ".csv";
         if (app == null && !IsCsv.Value) { //only the first time, run the Excel app on run
           app = new Application();
+          //app.CalculateBeforeSave = false;
           workbooks = app.Workbooks;
         }
         if (workbook != null) {
@@ -249,6 +254,7 @@ namespace Extension.Reader {
           sheets.Clear();
           sheets = null;
         }
+        workbook.Saved = true; //this skips the help-confirmation box when workbook is closed, otherwise, the dispose mechanism could be hindered by the box
         workbook.Close();
         Marshal.ReleaseComObject(workbook);
         workbook = null;
@@ -261,11 +267,17 @@ namespace Extension.Reader {
       }
       if (app != null) {
         app.Quit();
-        Marshal.ReleaseComObject(app);
+        Marshal.FinalReleaseComObject(app);
         app = null;
       }
       GC.Collect();
       GC.WaitForPendingFinalizers();
+      //according to: https://stackoverflow.com/questions/158706/how-do-i-properly-clean-up-excel-interop-objects/159419#159419
+      //The 2nd GC.Collect() and GC.WaitForPendingFinalizers() are needed if we use VSTO (Visual Studio Tools for Office)
+      if (UseVSTO) {
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+      }
     }
   }
 

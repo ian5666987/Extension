@@ -4,4 +4,3 @@ C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\bin\Release\Extension.Datab
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\obj\Release\Database.Base.csproj.CoreCompileInputs.cache
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\obj\Release\Extension.Database.Base.dll
 C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\obj\Release\Extension.Database.Base.pdb
-C:\ASTrio\VS2015\Desktop\DLL\Extension\Database.Base\obj\Release\Database.Base.csprojAssemblyReference.cache

@@ -13,7 +13,8 @@ namespace Extension.Debugger
   {
     private DateTime startDt = DateTime.Now;
     public static string LogFilenameFormat = "yyyyMMdd_HHmmss_fff";
-		public LogBoxForm(bool showLogBox = false, string streamRootFolder = null, string logFilenameFormat = null) {
+    public string LogFolderName { get; set; } = "Logs";
+    public LogBoxForm(bool showLogBox = false, string streamRootFolder = null, string logFolderName = null, string logFilenameFormat = null) {
 			InitializeComponent();
 			initComponent();
 			for (int i = 0; i < NO_OF_STOPWATCH; ++i) {
@@ -22,8 +23,9 @@ namespace Extension.Debugger
 			}
 			for (int i = 0; i < NO_OF_STOPWATCH; ++i)
 				stopWatchList[i].Start();
-			this.Visible = showLogBox;
+			Visible = showLogBox;
       this.streamRootFolder = streamRootFolder;
+      LogFolderName = logFolderName;
       if (!(string.IsNullOrEmpty(logFilenameFormat)))
         LogFilenameFormat = logFilenameFormat;
 		}
@@ -371,7 +373,7 @@ namespace Extension.Debugger
           //If stream checkbox is checked
           if (!string.IsNullOrEmpty(streamRootFolder) && entrySet.StreamCheckBox.Checked) { //Do the streaming, but must have the stream root folder too            
             Directory.CreateDirectory(streamRootFolder); //create the stream folder if necessary
-            string streamFolder = streamRootFolder + "\\Logs\\" + pageName;
+            string streamFolder = streamRootFolder + "\\" + LogFolderName + "\\" + pageName;
             Directory.CreateDirectory(streamFolder);
             string filepath = streamFolder + "\\" + entrySet.LogFilename + ".txt";
             using (StreamWriter writer = File.AppendText(filepath)) {
